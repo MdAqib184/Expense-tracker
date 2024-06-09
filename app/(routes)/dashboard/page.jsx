@@ -72,8 +72,8 @@ function Dashboard() {
     <div className='p-4'>
       <h2 className='text-3xl font-bold text-emerald-900'>
         <div className='flex items-center gap-2 justify-between'>
-          {/* Hi, {user?.username} 🖐 */}
-          Hi {sessionId}
+          Hi, {user?.username} 🖐
+          {/* Hi {sessionId} */}
           <FaArrowRight className='cursor-pointer rounded-full
           bg-slate-400 w-9 h-9 hover:bg-white'
             onClick={() => router.push(`/dashboard/budgets`)} size={20} />
@@ -84,6 +84,7 @@ function Dashboard() {
       <div className='grid grid-cols-1 md:grid-cols-3 mt-4 gap-4'>
         <div className='md:col-span-2'>
           <PieChartDash budgetList={budgetList} />
+          <h2 className='font-bold text-lg mt-3'>Latest Expenses</h2>
           <ExpenseInfoTable expensesInfo={expensesInfo} refreshData={() => getBudgetList()} />
         </div>
         <div className='grid gap-3'>
