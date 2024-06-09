@@ -4,7 +4,7 @@ import { useUser } from "@clerk/nextjs"
 import { db } from '@/utils/dbConfig';
 import { desc, eq, getTableColumns, sql } from 'drizzle-orm';
 import { Budgets, Expenses } from '@/utils/schema';
-import ExpenseInfoTable from './_components/ExpenseInfoTable';  // Adjusted path
+import ExpenseInfoTable from './_components/ExpenseInfoTable'; 
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import { useRouter } from 'next/navigation';
 
@@ -73,7 +73,7 @@ function ExpensePage() {
               All Expenses
               <FaArrowRight 
               className='cursor-pointer rounded-full bg-slate-400 w-6 h-6 md:w-7 md:h-7 hover:bg-white' 
-              onClick={() => router.push(`/dashboard/upgrade`)} 
+              onClick={() => router.push(`/dashboard/analysis`)} 
               size={20} 
               />
             </div>
